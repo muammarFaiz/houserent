@@ -1,0 +1,334 @@
+html {
+  scrollbar-color: hsl(135, 40%, 42%) hsl(135, 40%, 62%);
+}
+html::-webkit-scrollbar {
+  width: auto;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: hsl(135, 40%, 42%);
+}
+html::-webkit-scrollbar-track {
+  background-color: hsl(135, 40%, 62%);
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 0px;
+  min-height: 100vh;
+}
+input:focus {
+  outline: none;
+}
+
+.sidemenuon {
+  overflow: hidden;
+}
+.sidemenuon .sidemenu {
+  width: 100vw;
+  overflow: visible;
+  z-index: 2;
+}
+.replace_scrollbar .bodycontent_wrap {
+  grid-template-columns: 1fr 1.2vw 0px;
+}
+.replace_scrollbar .main_nav {
+  width: 94.6vw;
+}
+
+.bodycontent_wrap {
+  display: grid;
+  grid-template-columns: 1fr 0px 0px;
+  min-height: 100vh;
+}
+.main1 {
+  grid-row-start: 2;
+}
+aside {
+  grid-column-start: 3;
+  grid-row: span 2;
+}
+.missingscroll_replacer {
+  background-color: black;
+  grid-column-start: 2;
+  grid-row: span 2;
+}
+.mainnav_wrap {
+  height: 96px;
+}
+.main_nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 35px;
+  padding: 25px 37px;
+  padding-left: 20px;
+  background-color: hsl(225, 29%, 45%);
+  position: fixed;
+  height: 46px;
+  z-index: 2;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+.nav_rightside, .nav_leftside {
+  display: flex;
+  gap: 23px;
+}
+.hovergreenbtn {
+  text-decoration: none;
+  color: #e3e0e0;
+}
+.hovergreenbtn:hover {
+  color: #02a12a;
+}
+.search_inputbutton_wrap button {
+  background: none;
+  border: none;
+}
+.search_inputbutton_wrap button:hover .search_icon {
+  filter: invert(88%) sepia(0%) saturate(16%) hue-rotate(161deg) brightness(60%) contrast(94%);
+}
+.input_search {
+  font-size: 23px;
+  border-radius: 20px 10px;
+  padding: 5px 15px;
+}
+.search_icon {
+  width: 23px;
+  filter: invert(88%) sepia(0%) saturate(16%) hue-rotate(161deg) brightness(97%) contrast(94%);
+}
+.house_img_wp {
+  margin-bottom: 29px;
+  width: 100vw;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+.mygrid-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  /* grid-template-columns: repeat(2, 1fr); */
+  justify-content: center;
+  gap: 55px;
+  /* border: 1px solid blue; */
+  padding: 0px 48px;
+}
+.cardwrap {
+  height: 324px;
+  overflow: hidden;
+  border-radius: 9px;
+}
+.cardwrap_pos_relative {
+  position: relative;
+}
+.card {
+  /* background-color: rgb(135, 241, 241); */
+  background-color: hsl(0, 5%, 88%);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 250px;
+  transition: all 0.5s;
+  border-radius: 9px;
+}
+.cardwrap:hover {
+  overflow: visible;
+}
+.cardwrap:hover .card {
+  z-index: 1;
+  width: 330px;
+  left: -40px;
+  top: -40px;
+  border: 1px solid #b5c261;
+}
+.cardwrap:hover .addressdesc_wrap {
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.cardwrap:hover .addressdesc_wrap::-webkit-scrollbar {
+  height: 1vh;
+}
+.cardwrap:hover .addressdesc_wrap::-webkit-scrollbar-thumb {
+  background-color: hsl(135, 40%, 42%);
+}
+.cardwrap:hover .addressdesc_wrap::-webkit-scrollbar-track {
+  background-color: hsl(135, 40%, 62%);
+}
+.card > img {
+  margin-inline: auto;
+}
+.card > p {
+  word-break: break-word;
+}
+.card_desc_wrap {
+  display: grid;
+  gap: 13px;
+  padding: 23px 20px 23px;
+}
+.card_desc_wrap p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.phone,
+.rating,
+.bed,
+.toilet {
+  display: flex;
+}
+.address {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+}
+.bedandtoilet_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.card_desc1 {
+  display: grid;
+  gap: 7px;
+}
+.phone > p,
+.address p,
+.bed > p,
+.toilet > p {
+  margin-left: 20px;
+}
+.rating > p,
+.bed > p {
+  margin-left: 15px;
+}
+.address p {
+  font-size: 17px;
+}
+.phone > p {
+  font-size: 17px;
+}
+.myicon {
+  width: 16px;
+}
+.staricon,
+.bedicon {
+  width: 21px;
+}
+/* ---------------------------- tooltip text */
+.withtooltip {
+  position: relative;
+}
+.withtooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  left: -2px;
+  top: -50px;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 4px 9px;
+  color: white;
+  background-color: rgb(51, 49, 49);
+}
+.address_tooltip {
+  /* max-width: 176px; */
+  word-break: break-word;
+}
+.addressdesc_wrap {
+  max-width: 290px;
+  overflow: hidden;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+#mainDialog {
+  background-color: rgb(255, 230, 230);
+}
+#mainDialog::backdrop {
+  background: rgba(216, 216, 216, 0.7);
+}
+.dialogButton {
+  background: none;
+  /* border: none; */
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0);
+  font-size: 20px;
+}
+.dialogButton:hover {
+  border: solid 2px black;
+}
+.btnWrap {
+  display: flex;
+  justify-content: space-between;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.nextbuttonwrap {
+  text-align: center;
+  padding: 50px 0px 150px;
+}
+.nextbuttonwrap > a {
+  color: hsl(0, 5%, 88%);
+  font-size: 55px;
+  text-decoration: none;
+}
+/* ------------------------------------------- hamburger button -------------------------------------- */
+.burgercontainer {
+  /* display: inline-block; */
+  cursor: pointer;
+  width: fit-content;
+  /* float: right; */
+  /* position: absolute; */
+  right: 0px;
+}
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: hsl(0, 5%, 88%);
+	margin: 6px 0px;
+	transition: all 0.4s;
+}
+.burgerclicked .bar1 {
+  transform: translate(0px, 11px) rotate(-45deg);
+}
+.burgerclicked .bar2 {
+  opacity: 0;
+}
+.burgerclicked .bar3 {
+  transform: translate(0px, -11px) rotate(45deg);
+}
+.sidemenu {
+  /* border: 1px solid red; */
+  background-color: rgba(65, 63, 63, 0.4);
+  width: 0px;
+  /* transition: all 0.2s; */
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  right: 0px;
+  display: flex;
+  padding-top: 95px;
+}
+.sidemenu_contentwrap {
+  padding-left: 20px;
+  padding-top: 10px;
+  /* border: 1px solid red; */
+  min-width: 20vw;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.anchor_sidemenu {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 25px;
+  width: fit-content;
+}
+
+/* ----------------reuse------------------ */
+.houseimg_bor_radius {
+  border-radius: 9px 33px;
+}
+.bgcolor_gra_green {
+  /* hsl(225, 29%, 45%) */
+  /* background: linear-gradient(hsl(135, 98%, 32%), hsl(68, 44%, 57%)); */
+  background: linear-gradient(hsl(135, 29%, 45%), hsl(68, 29%, 45%));
+}

@@ -1,0 +1,14 @@
+<%- include('header', {title: 'register'}) %>
+<form action="/register" method="post" id="registerForm" class="lr_form">
+  <% if(info.fail) { %> <p class="lr_infofail"><%= info.fail %></p> <% } %>
+  <input type="text" name="username" id="formUsername" placeholder="username" list="namelist" class="lrform_input" required autofocus>
+  <datalist id="namelist">
+    <option value="name1"></option>
+    <option value="name2"></option>
+    <option value="name3"></option>
+  </datalist>
+  <input type="number" name="age" id="formAge" min="0" max="999" placeholder="age" class="lrform_input" required>
+  <input type="text" name="password" id="formPassword" placeholder="password" class="lrform_input" required>
+  <button type="submit">Register</button>
+</form>
+<%- include('footer') %>

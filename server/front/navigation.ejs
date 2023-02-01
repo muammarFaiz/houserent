@@ -1,0 +1,29 @@
+<div class="mainnav_wrap">
+  <nav class="main_nav">
+    <div class="nav_leftside">
+      <div class="burgercontainer">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <a href="/" class="hovergreenbtn">Home</a>
+    </div>
+    <div class="nav_middle">
+      <!-- use get request -->
+      <form action="/" method="get">
+        <div class="search_inputbutton_wrap">
+          <input type="text" name="keyword" class="input_search" required value="<%= info.searchbar_value %>">
+          <button type="submit"><img src="images/magnifying-glass-solid.svg" alt="Search" class="search_icon"></button>
+        </div>
+      </form>
+    </div>
+    <div class="nav_rightside">
+      <% if(!info.login) { %>
+        <a href="/login" class="nav_login_a hovergreenbtn">login</a>
+        <a href="/register" class="nav_register_a hovergreenbtn">Register</a>
+      <% } else { %>
+        <a href="/logout" class="nav_logout_a hovergreenbtn">Logout</a>
+        <% } %>
+    </div>
+  </nav>
+</div>

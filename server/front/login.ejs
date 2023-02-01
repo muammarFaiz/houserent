@@ -1,0 +1,15 @@
+<%- include('header', {title: 'login'}) %>
+<% if(info.fromRegister) { %>
+  <h1>Please login</h1>
+<% } %>
+<form action="/login" method="post" class="lr_form login_form">
+  <% if(info.fail) { %>
+    <p class="lr_infofail">Wrong username or password</p>
+  <% } %>
+  <input type="text" name="username" id="loginUsername" placeholder="username" class="lrform_input loginform_input" 
+  autofocus required>
+  <input type="text" name="password" id="loginPassword" placeholder="password" class="lrform_input loginform_input" 
+  required>
+  <button type="submit">Login</button>
+</form>
+<%- include('footer') %>

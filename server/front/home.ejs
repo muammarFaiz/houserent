@@ -1,0 +1,67 @@
+<%- include('header', {title: 'home'}) %>
+
+<!-- look at other website and see what we need -->
+
+<img src="images/houseimage_hd.png" alt="house image" class="house_img_wp">
+<div class="mygrid-parent">
+  <% info.houses.forEach(function(house) { %>
+    <div class="cardwrap">
+      <div class="cardwrap_pos_relative">
+        <div class="card clicktohousepage">
+          <img src="images/houseimage.png" width="357" height="294" alt="house image default" class="houseimg_bor_radius tohousepage">
+          <div class="card_desc_wrap">
+            <div class="card_desc1">
+              <p><%= house.owner_name %></p>
+              <div class="address">
+                <div class="addressicon_wrap withtooltip">
+                  <img class="myicon" src="images/location-dot-solid.svg" alt="address icon">
+                  <span class="tooltiptext">Address</span>
+                </div>
+                <div class="addressdesc_wrap">
+                  <!-- <p>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et odio sed similique repudiandae, ex reiciendis porro? Voluptates inventore vitae dignissimos.</p>
+                  <span class="tooltiptext address_tooltip">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et odio sed similique repudiandae, ex reiciendis porro? Voluptates inventore vitae dignissimos.</span> -->
+                  <p><%= house.address %></p>
+                  <!-- <span class="tooltiptext address_tooltip"><%= house.address %></span> -->
+                </div>
+              </div>
+              <div class="phone withtooltip">
+                <img class="myicon" src="images/phone-solid.svg" alt="phone icon">
+                <p><%= house.phone %></p>
+                <span class="tooltiptext">Phone</span>
+              </div>
+            </div>
+            <div class="rating withtooltip">
+              <img src="images/star-solid.svg" alt="star icon" class="myicon staricon">
+              <p><%= house.rating %></p>
+              <span class="tooltiptext">Rating</span>
+            </div>
+            <div class="bedandtoilet_wrap">
+              <div class="bed withtooltip">
+                <img src="images/bed-solid.svg" alt="bed icon" class="myicon bedicon">
+                <p><%= house.bed_count %></p>
+                <span class="tooltiptext">Bed Count</span>
+              </div>
+              <div class="toilet withtooltip">
+                <img src="images/toilet-solid.svg" alt="toilet icon" class="myicon">
+                <% if(house.priv_toilet < 1) { %>
+                  <p>Private</p>
+                <% } else { %>
+                    <p>Public</p>
+                <% } %>
+                <span class="tooltiptext">Toilet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>
+<div class="nextbuttonwrap">
+  <% if(info.nocardtoshow) { %>
+    <h2>Empty...</h2>
+  <% } else { %>
+    <%- info.anchornextpage %>&gt;</a>
+  <% } %>
+</div>
+<%- include('footer') %>

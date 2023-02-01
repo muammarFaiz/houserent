@@ -1,0 +1,19 @@
+.lr_form {
+  display: grid;
+  width: 500px;
+  margin: auto;
+  padding: 100px 100px;
+  gap: 10px;
+}
+.lrform_input {
+  font-size: 21px;
+  padding: 10px;
+}
+.lr_form button {
+  width: 133px;
+  font-size: 21px;
+  padding: 5px 0px;
+}
+.lr_infofail {
+  margin: 0px;
+}
