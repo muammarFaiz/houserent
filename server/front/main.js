@@ -4,6 +4,7 @@ window.addEventListener('load', async (event) => {
   const loginForm = document.querySelector('#loginForm')
   const gridparent = document.querySelector('.mygrid-parent')
   const housepagewrap = document.querySelector('.house-page__wrap')
+  const profilecard = document.querySelector('.profile_card')
   
     const utils = {
       yesnoDialog: function(dialog_words, nextCB) {
@@ -40,7 +41,7 @@ window.addEventListener('load', async (event) => {
   
         tohousepage.forEach(function(elem, key, parent) {
           elem.addEventListener('click', function() {
-            const house_index = elem.children['1'].firstElementChild.firstElementChild.className
+            const house_index = elem.classList[0]
             window.location.assign('/house/' + house_index)
           })
         })
@@ -103,5 +104,7 @@ window.addEventListener('load', async (event) => {
       utils.replace_scrollbar()
     }
     imagewrap.addEventListener('click', toggle_displayimg)
+  } else if(profilecard) {
+    utils.clickToHousePage()
   }
 })

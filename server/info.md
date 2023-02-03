@@ -17,5 +17,4 @@ z-2: .sidemenuon .sidemenu should be the most front element
 z-2: house-page__imagedisplayfront > div for image full size in house page
 
 now:
-- make the rented houses in profile click able to visit the house page
 - beautify old projects

@@ -110,7 +110,7 @@ module.exports = function routeLogic(tools) {
       try {
         const housedata = await tools.sqlQuery('SELECT * FROM houses WHERE house_index = ' + req.params.index)
         console.log(housedata)
-        res.render('house', {info: {housedata: housedata[0]}})
+        res.render('house', {info: {housedata: housedata[0], login: req.loginBool}})
       } catch (error) {
         res.render('house', {info: {housedata: {owner_name: 'error nih'}}})
       }
