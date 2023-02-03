@@ -105,5 +105,15 @@ module.exports = function routeLogic(tools) {
       console.log(results)
       res.send('ok')
     },
+    housepage: async function(req, res) {
+      console.log(req.params)
+      try {
+        const housedata = await tools.sqlQuery('SELECT * FROM houses WHERE house_index = ' + req.params.index)
+        console.log(housedata)
+        res.render('house', {info: {housedata: housedata[0]}})
+      } catch (error) {
+        res.render('house', {info: {housedata: {owner_name: 'error nih'}}})
+      }
+    }
   }
 }

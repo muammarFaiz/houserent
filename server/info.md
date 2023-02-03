@@ -14,7 +14,8 @@ z-1: .card when hover
 z-1: .tooltiptext tooltip when user hover the card details
 z-2: .main_nav position fixed and always on top
 z-2: .sidemenuon .sidemenu should be the most front element
+z-2: house-page__imagedisplayfront > div for image full size in house page
 
 now:
-- make a page for each home, + owner notes detailed info, owner profile photo and name
 - make the rented houses in profile click able to visit the house page
+- beautify old projects

@@ -55,10 +55,6 @@ module.exports = function signRoutes(app, myLogic, passport) {
       res.render('profile', {info: {login: req.loginBool}})
     })
 
-  app.route('/house/:name')
-    .get(function(req, res) {
-      console.log('house visited')
-      console.log(req.params)
-      res.render('house')
-    })
+  app.route('/house/:index')
+    .get(myLogic.housepage)
 }
